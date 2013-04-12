@@ -1,0 +1,34 @@
+<head>
+  <title>connection-status</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>Connection Status Reporter</h1>
+
+  <br />
+
+  <div class="status">
+    {{#with connectionStatus}}
+
+    <h2>Connected?</h2>
+    <p>{{connected}}</p>
+
+    <h2>Status</h2>
+    <p>{{status}}</p>
+
+    <h2>Retry Count</h2>
+    <p>{{retryCount}}</p>
+
+    <h2>Next retry</h2>
+    <p>{{time}}</p>
+
+    <h2>Reason</h2>
+    <p>{{reason}}</p>
+
+    {{/with}}
+  </div>
+</template>
